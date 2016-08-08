@@ -1,0 +1,2 @@
+tmux_left="session"
+tmux_right="load_average disk_io date time"

@@ -8,7 +8,7 @@
 # To run:
 # docker run --rm --name="indigo-base" -i -t opencog/ros-indigo-base
 #
-FROM ubuntu:14.04
+FROM hmlatapie/dl-docker 
 MAINTAINER Linas Vepštas "linasvepstas@gmail.com"
 
 # Avoid triggering apt-get dialogs (which may lead to errors). See:

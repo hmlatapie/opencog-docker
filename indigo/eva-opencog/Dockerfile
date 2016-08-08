@@ -86,10 +86,13 @@ RUN echo source /catkin_ws/devel/setup.bash >> ~/.bashrc
 
 COPY /scripts/eva.sh /catkin_ws/eva.sh
 
+RUN pip install -U pyyaml nltk && \
+	python -m nltk.downloader -d /usr/local/share/nltk_data punkt averaged_perceptron_tagger
+
 # Ports exposed
 # 11311 is roscore
 # EXPOSE 11311
 # 4444 is the relex parse server
 # EXPOSE 4444
 
-ENTRYPOINT bash -l -c "./eva.sh; bash"
+CMD bash -l -c "./eva.sh; bash"
