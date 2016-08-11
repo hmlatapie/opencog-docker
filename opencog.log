@@ -1,0 +1,131 @@
+[INFO] No config file found
+[2016-08-08 07:30:37:607] [INFO] Initializing ClassServer
+[2016-08-08 07:30:37:751] [INFO] [global_python_initialize] Start
+[2016-08-08 07:30:37:765] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2016-08-08 07:30:37:790] [INFO] Python 'sys.path' after OpenCog config adds is: ['', '/catkin_ws/devel/lib/python2.7/dist-packages', '/opt/ros/indigo/lib/python2.7/dist-packages', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode', '/usr/local/share/opencog/python', '/usr/local/share/opencog/python', '/usr/share/opencog/python', '/catkin_ws/devel/lib/python2.7/dist-packages', '/opt/ros/indigo/lib/python2.7/dist-packages']
+[2016-08-08 07:30:37:790] [INFO] [global_python_initialize] Finish
+[2016-08-08 07:30:37:790] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2016-08-08 07:30:41:560] [WARN] validate_clauses: Constant clauses removed from pattern
+[2016-08-08 07:30:41:560] [WARN] validate_clauses: Constant clauses removed from pattern
+[2016-08-08 07:30:41:601] [INFO] [global_python_initialize] Start
+[2016-08-08 07:30:41:601] [WARN] No database persistant storage configured! Use the STORAGE config keyword to define.
+[2016-08-08 07:30:41:601] [INFO] Loading module "/usr/local/lib/opencog/modules/libbuiltinreqs.so"
+[2016-08-08 07:30:41:602] [INFO] Loading module "/usr/local/lib/opencog/modules/libscheme-shell.so"
+[2016-08-08 07:30:41:602] [INFO] Loading module "/usr/local/lib/opencog/modules/libpy-shell.so"
+[2016-08-08 07:30:41:602] [INFO] Starting CogServer loop.
+[2016-08-08 07:31:22:685] [ERROR] Failed evaluation; see logfile for stack trace. (/opencog/atomspace/opencog/atoms/execution/ExecutionOutputLink.cc:159)
+	Stack Trace:
+	2: basic_string.h:293	  std::string::_M_data() const
+	3: Logger.cc:519	  opencog::Logger::Error::operator()(char const*, ...)
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
+	7: ExecutionOutputLink.cc:160	  opencog::ExecutionOutputLink::do_execute(opencog::AtomSpace*, opencog::Handle const&, opencog::Handle const&)
+	8: ExecutionOutputLink.cc:119	  opencog::ExecutionOutputLink::execute(opencog::AtomSpace*) const
+	9: shared_ptr_base.h:545	__base_dtor ()
+	10: Instantiator.cc:131	  opencog::Instantiator::walk_tree(opencog::Handle const&)
+	11: shared_ptr_base.h:779	__base_ctor ()
+	12: stl_tree.h:671	__base_dtor ()
+	13: Handle.h:146	_ZL10ss_executePN7opencog9AtomSpaceERKNS_6HandleE.92431()
+	14: SchemeModule.cc:41	  opencog::FunctionWrap::as_wrapper_h_h(opencog::Handle)
+	15: shared_ptr_base.h:545	__base_dtor ()
+	16: SchemePrimitive.cc:163	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
+	17: ??:0	scm_vm_engine()
+	18: ??:0	scm_primitive_eval()
+	19: ??:0	scm_eval()
+	20: ??:0	scm_vm_engine()
+	21: ??:0	scm_call_4()
+	22: SchemeEval.cc:838	  opencog::SchemeEval::do_scm_eval(scm_unused_struct*, scm_unused_struct* (*)(void*))
+	23: SchemeEval.cc:1214	  opencog::SchemeEval::c_wrap_apply_tv(void*)
+	24: ??:0	scm_at_abort()
+	25: ??:0	scm_vm_engine()
+	26: ??:0	scm_call_4()
+	27: ??:0	scm_at_abort()
+	28: ??:0	scm_c_with_continuation_barrier()
+	29: ??:0	GC_call_with_stack_base()
+	30: ??:0	scm_with_guile()
+	31: SchemeEval.cc:1200	  opencog::SchemeEval::apply_tv(std::string const&, opencog::Handle)
+	32: basic_string.h:539	  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+	33: shared_ptr_base.h:545	__base_dtor ()
+	34: EvaluationLink.cc:316	  opencog::EvaluationLink::do_eval_scratch(opencog::AtomSpace*, opencog::Handle const&, opencog::AtomSpace*, bool)
+	35: shared_ptr_base.h:545	__base_dtor ()
+	36: EvaluationLink.cc:455	  opencog::EvaluationLink::do_eval_scratch(opencog::AtomSpace*, opencog::Handle const&, opencog::AtomSpace*, bool)
+	37: EvaluationLink.cc:485	  opencog::EvaluationLink::do_evaluate(opencog::AtomSpace*, opencog::Handle const&, bool)
+	38: ExecSCM.cc:42	_ZL11ss_evaluatePN7opencog9AtomSpaceERKNS_6HandleE.92427()
+	39: SchemeModule.cc:55	  opencog::FunctionWrap::as_wrapper_p_h(opencog::Handle)
+	40: shared_ptr_base.h:545	__base_dtor ()
+	41: SchemePrimitive.cc:163	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
+	42: ??:0	scm_vm_engine()
+	43: ??:0	scm_pthread_mutex_lock()
+	44: ??:0	scm_at_abort()
+	45: ??:0	scm_vm_engine()
+	46: ??:0	scm_call_4()
+	47: ??:0	scm_at_abort()
+	48: ??:0	scm_c_with_continuation_barrier()
+	49: ??:0	scm_current_processor_count()
+
+[2016-08-08 07:31:22:848] [ERROR] Backtrace:
+In ice-9/boot-9.scm:
+ 157: 13 [catch #t #<catch-closure 706d2e0> ...]
+In unknown file:
+   ?: 12 [apply-smob/1 #<catch-closure 706d2e0>]
+   ?: 11 [opencog-extension cog-evaluate! ((DefinedPredicateNode "OpenPsi: loop")
+)]
+In ice-9/boot-9.scm:
+ 157: 10 [catch #t #<catch-closure 6d15320> ...]
+In unknown file:
+   ?: 9 [apply-smob/1 #<catch-closure 6d15320>]
+In ice-9/boot-9.scm:
+ 157: 8 [catch #t #<catch-closure 6d15200> ...]
+In unknown file:
+   ?: 7 [apply-smob/1 #<catch-closure 6d15200>]
+In opencog/openpsi/main.scm:
+  90: 6 [psi-step]
+In srfi/srfi-1.scm:
+ 576: 5 [map #<procedure 330d100 at opencog/openpsi/main.scm:91:8 (d)> (# #)]
+ 578: 4 [map #<procedure act-and-evaluate (rule)> (#)]
+In opencog/openpsi/main.scm:
+  80: 3 [act-and-evaluate #]
+In unknown file:
+   ?: 2 [opencog-extension cog-execute! (#)]
+In ice-9/boot-9.scm:
+ 102: 1 [#<procedure 70bc580 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+In unknown file:
+   ?: 0 [apply-smob/1 #<catch-closure 6d151c0> C++-EXCEPTION ...]
+
+ERROR: In procedure apply-smob/1:
+ERROR: In procedure cog-execute!: Failed evaluation; see logfile for stack trace. (/opencog/atomspace/opencog/atoms/execution/ExecutionOutputLink.cc:159)
+ABORT: C++-EXCEPTION
+ (/opencog/atomspace/opencog/guile/SchemeEval.cc:1201)
+	Stack Trace:
+	2: basic_string.h:293	  std::string::_M_data() const
+	3: Logger.cc:519	  opencog::Logger::Error::operator()(char const*, ...)
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
+	7: SchemeEval.cc:1201	  opencog::SchemeEval::apply_tv(std::string const&, opencog::Handle)
+	8: basic_string.h:539	  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+	9: shared_ptr_base.h:545	__base_dtor ()
+	10: EvaluationLink.cc:316	  opencog::EvaluationLink::do_eval_scratch(opencog::AtomSpace*, opencog::Handle const&, opencog::AtomSpace*, bool)
+	11: shared_ptr_base.h:545	__base_dtor ()
+	12: EvaluationLink.cc:455	  opencog::EvaluationLink::do_eval_scratch(opencog::AtomSpace*, opencog::Handle const&, opencog::AtomSpace*, bool)
+	13: EvaluationLink.cc:485	  opencog::EvaluationLink::do_evaluate(opencog::AtomSpace*, opencog::Handle const&, bool)
+	14: ExecSCM.cc:42	_ZL11ss_evaluatePN7opencog9AtomSpaceERKNS_6HandleE.92427()
+	15: SchemeModule.cc:55	  opencog::FunctionWrap::as_wrapper_p_h(opencog::Handle)
+	16: shared_ptr_base.h:545	__base_dtor ()
+	17: SchemePrimitive.cc:163	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
+	18: ??:0	scm_vm_engine()
+	19: ??:0	scm_pthread_mutex_lock()
+	20: ??:0	scm_at_abort()
+	21: ??:0	scm_vm_engine()
+	22: ??:0	scm_call_4()
+	23: ??:0	scm_at_abort()
+	24: ??:0	scm_c_with_continuation_barrier()
+	25: ??:0	scm_current_processor_count()
+	26: ??:0	GC_call_with_stack_base()
+	27: ??:0	scm_all_threads()
+	28: ??:0	GC_inner_start_routine()
+	29: ??:0	GC_call_with_stack_base()
+	30: ??:0	start_thread()
+	31: ??:0	clone()
+
